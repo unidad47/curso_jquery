@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Ejemplo query selector</title>
+
+		<style type="text/css">
+
+			p {
+				border-style: solid;
+				padding: 10px;
+				margin-bottom: 20px;
+			}
+
+			div {
+				border-style: solid;
+				border-color: green;
+				padding: 10px;
+				margin-bottom: 20px;
+			}
+
+			.relleno {
+				background-color:#007BC4;
+			}
+
+			.esquinas {
+				/* ------------ ESQUINAS REDONDAS ---------------*/
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+				-o-border-radius: 10px;
+				border-radius: 10px;
+			}
+
+			.sombras {
+				/*------------------ SOMBRAS ---------------------*/
+				/*sombras*/
+				-webkit-box-shadow: 0px 0px 5px 3px #333;
+				-moz-box-shadow: 0px 0px 5px 3px #333;
+				-o-box-shadow: 0px 0px 5px 3px #333;
+				box-shadow: 0px 0px 5px 3px #333;
+			}
+
+		</style>
+
+		<script src="javascript/jquery-1.10.2.min.js"></script>
+		
+		<script>
+		    $(function(){
+		    	//caja tiene el objeto del dom asociado a la etiqueta indicada
+		    	var caja = $(".relleno");
+		    	caja.html("Nuevo texto usando el dom!!");
+		    	
+		    });
+		</script>
+	</head>
+	<body>
+
+		<div id="texto1" class="relleno">
+			Texto 1
+		</div>
+		<div id="texto2" class="relleno">
+			Texto 2
+		</div>
+		<div id="texto3" class="relleno2">
+			Texto 3
+		</div>
+		<div id="texto4" class="relleno2">
+			Texto 3
+		</div>		
+
+		<div id="log">
+			log
+		</div>
+
+        <button id="boton-mostrar-texto">Mostrar texto en caja 1</button>
+		<button id="boton-texto">Cambiar texto en caja 1</button>
+		<button id="boton-esquinas">Agregar Esquinas en caja 1</button>
+		<button id="boton-sombras">Agregar Sombras en caja 1</button>
+
+	</body>
+</html>
